@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-flislb*-*-y!ce@y7^xa1d#^6j@$f_*)qg@waimy-a$af95yk&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ipagemysql.com]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,17 +74,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'ig_downloader',
-        'USER': 'igdownloader@pakcok64222.ipagemysql.com',
-        'PASSWORD': 'Admin123456!',
-        'HOST': 'ipagemysql.com',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -113,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'CA'
+TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
