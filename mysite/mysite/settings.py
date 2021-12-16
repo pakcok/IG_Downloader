@@ -53,9 +53,22 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
+    # {
+    #     'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    #     'DIRS': [],
+    #     'APP_DIRS': True,
+    #     'OPTIONS': {
+    #         'context_processors': [
+    #             'django.template.context_processors.debug',
+    #             'django.template.context_processors.request',
+    #             'django.contrib.auth.context_processors.auth',
+    #             'django.contrib.messages.context_processors.messages',
+    #         ],
+    #     },
+    # },
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,10 +116,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
+# Time Zone Name https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Canada/Pacific'
 
 USE_I18N = True
 
